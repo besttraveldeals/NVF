@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Proposal – Narmada View Farms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-container {
+            min-height: 75vh;
+            max-width: 1200px;
+        }
+        .dot {
+            transition: background-color 0.3s ease;
+        }
+        /* CMS Edit Styles */
+        .edit-mode [contenteditable="true"] {
+            outline: 2px dashed #3b82f6;
+            background-color: #eff6ff;
+            padding: 2px 4px;
+            border-radius: 4px;
+            cursor: text;
+        }
+        .edit-mode .image-editor {
+            position: relative;
+        }
+        .edit-mode .image-editor .edit-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-editor .edit-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: none;
+        }
+        .edit-mode .image-editor:hover .edit-overlay {
+            opacity: 1;
+        }
+        .image-editor .url-input {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+        .edit-mode .image-editor .url-input {
+            display: block;
+        }
+        /* Login Modal Styles */
+        .login-modal {
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div id="presentation-wrapper" class="w-full max-w-6xl shadow-2xl rounded-2xl overflow-hidden bg-white">
+        <!-- Header with CMS Toggle -->
+        <header class="p-4 bg-gray-800 text-white flex justify-between items-center">
+            <h2 class="text-lg font-semibold">Narmada View Farms Proposal</h2>
+            <div class="flex items-center space-x-3">
+                <span id="edit-mode-label" class="text-sm text-gray-300">View Mode</span>
+                <button id="toggle-edit-mode" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
+                    Enable Edit Mode
+                </button>
+            </div>
+        </header>
+
+        <!-- Slide Container -->
+        <div class="slide-container w-full mx-auto p-6 md:p-12 bg-white flex items-center justify-center">
+
+            <!-- Slide 1: Title Slide -->
+            <div id="slide-1" class="slide active w-full">
+                <div class="text-center flex flex-col items-center justify-center h-full">
+                    <div class="image-editor w-24 h-24 mb-6">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Logo" alt="Company Logo" class="w-full h-full object-cover rounded-lg">
+                        <div class="edit-overlay"><p class="text-xs">Click to Edit Image Link</p></div>
+                        <input type="text" class="url-input p-1 rounded border" value="https://placehold.co/100x100/3b82f6/ffffff?text=Logo" placeholder="Paste new image URL and press Enter">
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 editable" contenteditable="false">Investment Proposal – Narmada View Farms</h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mt-4 editable" contenteditable="false">Request for Investment of ₹5 Crore</p>
+                    <div class="mt-12 text-left w-full max-w-md">
+                        <p class="text-md text-gray-700 border-b pb-2 mb-2 editable" contenteditable="false"><strong>Prepared for:</strong> GM, Narmada & Sons</p>
+                        <p class="text-md text-gray-700 border-b pb-2 mb-2 editable" contenteditable="false"><strong>Prepared by:</strong> Your Name/Team</p>
+                        <p class="text-md text-gray-700 editable" contenteditable="false"><strong>Date:</strong> October 3, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Project Location -->
+            <div id="slide-2" class="slide w-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Project Location</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg">
+                         <img src="https://placehold.co/600x400/e0e0e0/333333?text=Project+Map+Placeholder" alt="Map of Project Location" class="w-full h-full object-cover">
+                         <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
+                         <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/600x400/e0e0e0/333333?text=Project+Map+Placeholder" placeholder="Paste new image URL and press Enter">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 editable" contenteditable="false">Location Details</h3>
+                        <p class="text-gray-700 mb-4 editable" contenteditable="false">Total area: 2.3 ha approx.</p>
+                        <p class="text-gray-700 mb-6 editable" contenteditable="false">Scenic Narmada riverfront, surrounded by lush greenery offering a serene and premium experience.</p>
+                        <h4 class="text-lg font-semibold mb-3 editable" contenteditable="false">Legend:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center editable" contenteditable="false"><span class="w-4 h-4 rounded-full bg-blue-500 mr-3"></span>Leased Land</li>
+                            <li class="flex items-center editable" contenteditable="false"><span class="w-4 h-4 rounded-full bg-green-500 mr-3"></span>Govt. Land</li>
+                            <li class="flex items-center editable" contenteditable="false"><span class="w-4 h-4 rounded-full bg-yellow-500 mr-3"></span>Cottage Area</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Land & Project Overview -->
+            <div id="slide-3" class="slide w-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Land & Project Overview</h2>
+                <div class="overflow-x-auto mb-6">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Land Type</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Key Developments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t">
+                                <td class="p-3 editable" contenteditable="false">Leased Land</td>
+                                <td class="p-3 editable" contenteditable="false">1.42 ha / 1,52,848 sqft</td>
+                                <td class="p-3 editable" contenteditable="false">Landscaping, restaurant, furniture, plantation</td>
+                            </tr>
+                            <tr class="border-t bg-gray-50">
+                                <td class="p-3 editable" contenteditable="false">Govt. Land</td>
+                                <td class="p-3 editable" contenteditable="false">0.52 ha / 55,970 sqft</td>
+                                <td class="p-3 editable" contenteditable="false">Employee building, landscaping, bore, agriculture equipment</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="p-3 editable" contenteditable="false">Cottage Land</td>
+                                <td class="p-3 editable" contenteditable="false">0.36 ha / 38,750 sqft</td>
+                                <td class="p-3 editable" contenteditable="false">Cottage construction, landscaping, water tank, plantation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                     <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                         <img src="https://placehold.co/400x300/a7f3d0/1e40af?text=Cottages" alt="Cottages Concept" class="w-full h-full object-cover">
+                         <div class="edit-overlay"><p>Edit Link</p></div>
+                         <input type="text" class="url-input p-1 rounded" value="https://placehold.co/400x300/a7f3d0/1e40af?text=Cottages" placeholder="Paste URL & Enter">
+                     </div>
+                     <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                         <img src="https://placehold.co/400x300/fecaca/991b1b?text=Restaurant" alt="Restaurant Concept" class="w-full h-full object-cover">
+                         <div class="edit-overlay"><p>Edit Link</p></div>
+                         <input type="text" class="url-input p-1 rounded" value="https://placehold.co/400x300/fecaca/991b1b?text=Restaurant" placeholder="Paste URL & Enter">
+                     </div>
+                     <div class="p-4 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <p class="text-blue-800 font-semibold editable" contenteditable="false">Unique Feature: Fully operational farm-stay, luxury cottages, restaurant, water & adventure sports facilities.</p>
+                     </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Investment Breakdown – Leased Land -->
+            <div id="slide-4" class="slide w-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Investment Breakdown – Leased Land</h2>
+                 <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Component</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area / Units</th>
+                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false">Cost (₹ Cr)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t">
+                                <td class="p-3 editable" contenteditable="false">Landscaping & Development</td>
+                                <td class="p-3 editable" contenteditable="false">52,000 sqft</td>
+                                <td class="p-3 text-right editable" contenteditable="false">0.6</td>
+                            </tr>
+                            <tr class="border-t bg-gray-50">
+                                <td class="p-3 editable" contenteditable="false">Restaurant Construction</td>
+                                <td class="p-3 editable" contenteditable="false">5,500 sqft</td>
+                                <td class="p-3 text-right editable" contenteditable="false">1.1</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="p-3 editable" contenteditable="false">Restaurant Furniture</td>
+                                <td class="p-3 editable" contenteditable="false">-</td>
+                                <td class="p-3 text-right editable" contenteditable="false">0.7</td>
+                            </tr>
+                            <tr class="border-t font-bold bg-blue-50">
+                                <td class="p-3 editable" contenteditable="false">Subtotal</td>
+                                <td class="p-3 editable" contenteditable="false">-</td>
+                                <td class="p-3 text-right editable" contenteditable="false">2.4</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="p-3 editable" contenteditable="false">Lease Cost</td>
+                                <td class="p-3 editable" contenteditable="false">-</td>
+                                <td class="p-3 text-right editable" contenteditable="false">0</td>
+                            </tr>
+                             <tr class="border-t font-bold text-xl bg-blue-100 text-blue-800">
+                                <td class="p-4 editable" contenteditable="false">Total</td>
+                                <td class="p-4 editable" contenteditable="false">-</td>
+                                <td class="p-4 text-right editable" contenteditable="false">2.4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Slide 5: Investment Breakdown – Govt. Land & Farm Operations -->
+            <div id="slide-5" class="slide w-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Investment Breakdown – Govt. Land & Farm</h2>
+                 <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                         <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Component</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area / Units</th>
+                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false">Cost (₹ Cr)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Employee Building</td><td class="p-3 editable" contenteditable="false">5,500 sqft</td><td class="p-3 text-right editable" contenteditable="false">0.55</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Landscaping & Plantation</td><td class="p-3 editable" contenteditable="false">56,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">1.1</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Govt. Land Development</td><td class="p-3 editable" contenteditable="false">60,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">0.9</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Bore, Servant Rooms, Pumps, Tractor, Irrigation</td><td class="p-3 editable" contenteditable="false">-</td><td class="p-3 text-right editable" contenteditable="false">0.15</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Land Cost</td><td class="p-3 editable" contenteditable="false">56,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">2.8</td></tr>
+                            <tr class="border-t font-bold text-xl bg-green-100 text-green-800">
+                                <td class="p-4 editable" contenteditable="false">Total</td>
+                                <td class="p-4 editable" contenteditable="false">-</td>
+                                <td class="p-4 text-right editable" contenteditable="false">5.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Slide 6: Investment Breakdown – Cottage Area -->
+            <div id="slide-6" class="slide w-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Investment Breakdown – Cottage Area</h2>
+                 <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Component</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area / Units</th>
+                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false">Cost (₹ Cr)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Landscaping & Development</td><td class="p-3 editable" contenteditable="false">38,750 sqft</td><td class="p-3 text-right editable" contenteditable="false">1.2</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Cottage Construction</td><td class="p-3 editable" contenteditable="false">3,100 sqft</td><td class="p-3 text-right editable" contenteditable="false">1.0</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Cottage Furniture</td><td class="p-3 editable" contenteditable="false">-</td><td class="p-3 text-right editable" contenteditable="false">0.1</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Govt. Land Development</td><td class="p-3 editable" contenteditable="false">35,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">0.5</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Water Tank</td><td class="p-3 editable" contenteditable="false">30,000 Ltr</td><td class="p-3 text-right editable" contenteditable="false">0.1</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Land Cost</td><td class="p-3 editable" contenteditable="false">38,750 sqft</td><td class="p-3 text-right editable" contenteditable="false">2.5</td></tr>
+                            <tr class="border-t font-bold text-xl bg-yellow-100 text-yellow-800">
+                                <td class="p-4 editable" contenteditable="false">Total</td>
+                                <td class="p-4 editable" contenteditable="false">-</td>
+                                <td class="p-4 text-right editable" contenteditable="false">5.4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Slide 7: Project Highlights -->
+            <div id="slide-7" class="slide w-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Project Highlights</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="editable" contenteditable="false">✓ Luxury farm-stay along Narmada River</li>
+                        <li class="editable" contenteditable="false">✓ Fully furnished cottages & restaurant with modern amenities</li>
+                        <li class="editable" contenteditable="false">✓ Landscaped gardens, plantation of mango, guava, citrus, chiku, rudraksh, mahogany, and neem trees</li>
+                        <li class="editable" contenteditable="false">✓ Employee accommodation with fully furnished buildings</li>
+                        <li class="editable" contenteditable="false">✓ Integrated irrigation & bore systems for sustainability</li>
+                        <li class="editable" contenteditable="false">✓ Opportunity for water tourism tie-ups (boating, adventure activities)</li>
+                    </ul>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                            <img src="https://placehold.co/300x300/c7d2fe/312e81?text=Gardens" alt="Landscaped Gardens" class="w-full h-full object-cover">
+                            <div class="edit-overlay"><p>Edit Link</p></div>
+                            <input type="text" class="url-input p-1 rounded" value="https://placehold.co/300x300/c7d2fe/312e81?text=Gardens" placeholder="Paste URL & Enter">
+                        </div>
+                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                            <img src="https://placehold.co/300x300/ddd6fe/4c1d95?text=Amenities" alt="Modern Amenities" class="w-full h-full object-cover">
+                            <div class="edit-overlay"><p>Edit Link</p></div>
+                            <input type="text" class="url-input p-1 rounded" value="https://placehold.co/300x300/ddd6fe/4c1d95?text=Amenities" placeholder="Paste URL & Enter">
+                        </div>
+                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow col-span-2">
+                            <img src="https://placehold.co/600x300/e0f2fe/075985?text=Water+Sports" alt="Adventure Area" class="w-full h-full object-cover">
+                            <div class="edit-overlay"><p>Edit Link</p></div>
+                            <input type="text" class="url-input p-1 rounded" value="https://placehold.co/600x300/e0f2fe/075985?text=Water+Sports" placeholder="Paste URL & Enter">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Investment Request -->
+            <div id="slide-8" class="slide w-full text-center">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 editable" contenteditable="false">Investment Request</h2>
+                 <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-8 rounded-lg max-w-3xl mx-auto shadow-md">
+                     <p class="text-lg mb-2 editable" contenteditable="false">Total Investment Requested:</p>
+                     <p class="text-5xl font-extrabold mb-6 editable" contenteditable="false">₹5 Crore (approx.)</p>
+                     <p class="text-lg mb-4 font-medium editable" contenteditable="false">Purpose: Construction, development, landscaping, plantation, and operational readiness.</p>
+                     <p class="text-md mb-6 editable" contenteditable="false">Return Potential: Highlighted through profit-sharing and phased project operations.</p>
+                     <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-3 editable" contenteditable="false">Next Steps</h3>
+                        <p class="text-lg editable" contenteditable="false">Approval & fund allocation for development in the upcoming year.</p>
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Slide 9: Profit & ROI Projection -->
+            <div id="slide-9" class="slide w-full">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Profit & ROI Projection</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-4 editable" contenteditable="false">Profit Potential</h3>
+                        <p class="bg-gray-100 p-4 rounded-lg text-center text-lg font-mono editable" contenteditable="false">Net Profit = Revenue – Expenses</p>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4 editable" contenteditable="false">Manager’s Profit Share</h3>
+                        <ul class="list-disc list-inside space-y-2 text-lg text-gray-600">
+                            <li class="editable" contenteditable="false">10% initially</li>
+                            <li class="editable" contenteditable="false">Increasing to 15% post-completion</li>
+                        </ul>
+                    </div>
+                     <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg">
+                         <img src="https://placehold.co/600x400/dcfce7/14532d?text=ROI+Chart" alt="ROI Chart" class="w-full h-full object-cover">
+                         <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
+                         <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/600x400/dcfce7/14532d?text=ROI+Chart" placeholder="Paste new image URL and press Enter">
+                    </div>
+                 </div>
+            </div>
+            
+            <!-- Slide 10: Timeline -->
+            <div id="slide-10" class="slide w-full">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center editable" contenteditable="false">Project Timeline</h2>
+                <div class="relative pl-8">
+                    <!-- Vertical line -->
+                    <div class="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-300"></div>
+            
+                    <div class="relative mb-8">
+                        <div class="absolute left-[-8px] top-1.5 w-4 h-4 bg-blue-500 rounded-full border-2 border-white"></div>
+                        <h3 class="text-xl font-semibold text-blue-600 editable" contenteditable="false">Project Start: Upcoming year</h3>
+                    </div>
+            
+                    <div class="relative mb-8">
+                        <div class="absolute left-[-8px] top-1.5 w-4 h-4 bg-gray-400 rounded-full border-2 border-white"></div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2 editable" contenteditable="false">Phased Development:</h3>
+                        <div class="pl-6 border-l-2 border-gray-200 ml-1 py-2">
+                            <p class="mb-2 editable" contenteditable="false"><strong>Phase 1:</strong> Leased Land & Restaurant Development</p>
+                            <p class="mb-2 editable" contenteditable="false"><strong>Phase 2:</strong> Govt. Land & Employee Accommodation</p>
+                            <p class="editable" contenteditable="false"><strong>Phase 3:</strong> Cottage Construction & Landscaping</p>
+                        </div>
+                    </div>
+            
+                    <div class="relative">
+                        <div class="absolute left-[-8px] top-1.5 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                        <h3 class="text-xl font-semibold text-green-600 editable" contenteditable="false">Expected Completion: Q4 2026</h3>
+                    </div>
+                </div>
+                 <div class="mt-8 image-editor w-full h-40 rounded-lg overflow-hidden shadow-lg">
+                     <img src="https://placehold.co/800x200/fafafa/555?text=Timeline+Graphic" alt="Timeline Graphic" class="w-full h-full object-cover">
+                     <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
+                     <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/800x200/fafafa/555?text=Timeline+Graphic" placeholder="Paste new image URL and press Enter">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-between p-4 bg-gray-100 border-t">
+            <button id="prev-btn" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+            <div id="slide-indicators" class="flex space-x-2">
+                <!-- Dots will be inserted by JS -->
+            </div>
+            <button id="next-btn" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-sm">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Admin Login</h2>
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <form id="login-form">
+                <div class="mb-4">
+                    <label for="login-id" class="block text-gray-700 text-sm font-bold mb-2">ID</label>
+                    <input type="text" id="login-id" class="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="login-pass" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                    <input type="password" id="login-pass" class="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-500" required>
+                </div>
+                <p id="login-error" class="text-red-500 text-sm mb-4 h-4"></p>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Slider elements
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const indicatorsContainer = document.getElementById('slide-indicators');
+            
+            // CMS elements
+            const toggleEditBtn = document.getElementById('toggle-edit-mode');
+            const editModeLabel = document.getElementById('edit-mode-label');
+            const presentationWrapper = document.getElementById('presentation-wrapper');
+            const editableElements = document.querySelectorAll('.editable');
+            const imageEditors = document.querySelectorAll('.image-editor');
+
+            // Login Modal elements
+            const loginModal = document.getElementById('login-modal');
+            const loginForm = document.getElementById('login-form');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const loginIdInput = document.getElementById('login-id');
+            const loginPassInput = document.getElementById('login-pass');
+            const loginError = document.getElementById('login-error');
+
+            let currentSlide = 0;
+            let isEditMode = false;
+
+            // --- Slider Logic ---
+            function showSlide(index) {
+                slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+                updateNavigation();
+            }
+
+            function updateNavigation() {
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('bg-blue-500', i === currentSlide);
+                    dot.classList.toggle('bg-gray-400', i !== currentSlide);
+                });
+            }
+            
+            function createIndicators() {
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('dot', 'w-3', 'h-3', 'rounded-full');
+                    dot.addEventListener('click', () => {
+                        currentSlide = i;
+                        showSlide(currentSlide);
+                    });
+                    indicatorsContainer.appendChild(dot);
+                });
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            // --- CMS & Login Logic ---
+            function enableEditMode() {
+                isEditMode = true;
+                presentationWrapper.classList.add('edit-mode');
+                
+                toggleEditBtn.textContent = 'Logout';
+                toggleEditBtn.classList.replace('bg-blue-600', 'bg-red-600');
+                toggleEditBtn.classList.replace('hover:bg-blue-700', 'hover:bg-red-700');
+                editModeLabel.textContent = 'Edit Mode Active';
+                
+                editableElements.forEach(el => el.setAttribute('contenteditable', true));
+            }
+
+            function disableEditMode() {
+                isEditMode = false;
+                presentationWrapper.classList.remove('edit-mode');
+                
+                toggleEditBtn.textContent = 'Enable Edit Mode';
+                toggleEditBtn.classList.replace('bg-red-600', 'bg-blue-600');
+                toggleEditBtn.classList.replace('hover:bg-red-700', 'hover:bg-blue-700');
+                editModeLabel.textContent = 'View Mode';
+                
+                editableElements.forEach(el => el.setAttribute('contenteditable', false));
+            }
+
+            toggleEditBtn.addEventListener('click', () => {
+                if (isEditMode) {
+                    disableEditMode();
+                } else {
+                    loginError.textContent = '';
+                    loginModal.style.display = 'flex';
+                }
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+            });
+
+            loginModal.addEventListener('click', (e) => {
+                if (e.target === loginModal) {
+                    loginModal.style.display = 'none';
+                }
+            });
+
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const id = loginIdInput.value;
+                const pass = loginPassInput.value;
+
+                if (id === 'GMNVF' && pass === 'GMNVF') {
+                    loginModal.style.display = 'none';
+                    loginIdInput.value = '';
+                    loginPassInput.value = '';
+                    enableEditMode();
+                } else {
+                    loginError.textContent = 'Invalid ID or password.';
+                    loginPassInput.value = '';
+                }
+            });
+            
+            imageEditors.forEach(editor => {
+                const img = editor.querySelector('img');
+                const input = editor.querySelector('.url-input');
+                
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const newUrl = input.value.trim();
+                        if (newUrl) img.src = newUrl;
+                        input.blur();
+                    }
+                });
+                
+                 input.addEventListener('blur', () => {
+                    const newUrl = input.value.trim();
+                    if (newUrl && img.src !== newUrl) img.src = newUrl;
+                });
+            });
+
+            // --- Initialization ---
+            createIndicators();
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
+
