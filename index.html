@@ -97,39 +97,39 @@
             <!-- Slide 1: Title Slide -->
             <div id="slide-1" class="slide active w-full">
                 <div class="text-center flex flex-col items-center justify-center h-full">
-                    <div class="image-editor w-24 h-24 mb-6">
+                    <div class="image-editor w-24 h-24 mb-6" data-id="s1-logo">
                         <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Logo" alt="Company Logo" class="w-full h-full object-cover rounded-lg">
                         <div class="edit-overlay"><p class="text-xs">Click to Edit Image Link</p></div>
                         <input type="text" class="url-input p-1 rounded border" value="https://placehold.co/100x100/3b82f6/ffffff?text=Logo" placeholder="Paste new image URL and press Enter">
                     </div>
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 editable" contenteditable="false">Investment Proposal – Narmada View Farms</h1>
-                    <p class="text-xl md:text-2xl text-gray-600 mt-4 editable" contenteditable="false">Request for Investment of ₹5 Crore</p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 editable" contenteditable="false" data-id="s1-title">Investment Proposal – Narmada View Farms</h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mt-4 editable" contenteditable="false" data-id="s1-subtitle">Request for Investment of ₹5 Crore</p>
                     <div class="mt-12 text-left w-full max-w-md">
-                        <p class="text-md text-gray-700 border-b pb-2 mb-2 editable" contenteditable="false"><strong>Prepared for:</strong> GM, Narmada & Sons</p>
-                        <p class="text-md text-gray-700 border-b pb-2 mb-2 editable" contenteditable="false"><strong>Prepared by:</strong> Your Name/Team</p>
-                        <p class="text-md text-gray-700 editable" contenteditable="false"><strong>Date:</strong> October 3, 2025</p>
+                        <p class="text-md text-gray-700 border-b pb-2 mb-2 editable" contenteditable="false" data-id="s1-prep-for"><strong>Prepared for:</strong> GM, Narmada & Sons</p>
+                        <p class="text-md text-gray-700 border-b pb-2 mb-2 editable" contenteditable="false" data-id="s1-prep-by"><strong>Prepared by:</strong> Your Name/Team</p>
+                        <p class="text-md text-gray-700 editable" contenteditable="false" data-id="s1-date"><strong>Date:</strong> October 3, 2025</p>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 2: Project Location -->
             <div id="slide-2" class="slide w-full">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Project Location</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s2-title">Project Location</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg">
+                    <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg" data-id="s2-map">
                          <img src="https://placehold.co/600x400/e0e0e0/333333?text=Project+Map+Placeholder" alt="Map of Project Location" class="w-full h-full object-cover">
                          <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
                          <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/600x400/e0e0e0/333333?text=Project+Map+Placeholder" placeholder="Paste new image URL and press Enter">
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-4 editable" contenteditable="false">Location Details</h3>
-                        <p class="text-gray-700 mb-4 editable" contenteditable="false">Total area: 2.3 ha approx.</p>
-                        <p class="text-gray-700 mb-6 editable" contenteditable="false">Scenic Narmada riverfront, surrounded by lush greenery offering a serene and premium experience.</p>
-                        <h4 class="text-lg font-semibold mb-3 editable" contenteditable="false">Legend:</h4>
+                        <h3 class="text-xl font-semibold mb-4 editable" contenteditable="false" data-id="s2-loc-details-title">Location Details</h3>
+                        <p class="text-gray-700 mb-4 editable" contenteditable="false" data-id="s2-loc-area">Total area: 2.3 ha approx.</p>
+                        <p class="text-gray-700 mb-6 editable" contenteditable="false" data-id="s2-loc-desc">Scenic Narmada riverfront, surrounded by lush greenery offering a serene and premium experience.</p>
+                        <h4 class="text-lg font-semibold mb-3 editable" contenteditable="false" data-id="s2-legend-title">Legend:</h4>
                         <ul class="space-y-2">
-                            <li class="flex items-center editable" contenteditable="false"><span class="w-4 h-4 rounded-full bg-blue-500 mr-3"></span>Leased Land</li>
-                            <li class="flex items-center editable" contenteditable="false"><span class="w-4 h-4 rounded-full bg-green-500 mr-3"></span>Govt. Land</li>
-                            <li class="flex items-center editable" contenteditable="false"><span class="w-4 h-4 rounded-full bg-yellow-500 mr-3"></span>Cottage Area</li>
+                            <li class="flex items-center editable" contenteditable="false" data-id="s2-legend-leased"><span class="w-4 h-4 rounded-full bg-blue-500 mr-3"></span>Leased Land</li>
+                            <li class="flex items-center editable" contenteditable="false" data-id="s2-legend-govt"><span class="w-4 h-4 rounded-full bg-green-500 mr-3"></span>Govt. Land</li>
+                            <li class="flex items-center editable" contenteditable="false" data-id="s2-legend-cottage"><span class="w-4 h-4 rounded-full bg-yellow-500 mr-3"></span>Cottage Area</li>
                         </ul>
                     </div>
                 </div>
@@ -137,94 +137,94 @@
 
             <!-- Slide 3: Land & Project Overview -->
             <div id="slide-3" class="slide w-full">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Land & Project Overview</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s3-title">Land & Project Overview</h2>
                 <div class="overflow-x-auto mb-6">
                     <table class="min-w-full bg-white border border-gray-200 rounded-lg">
                         <thead class="bg-gray-100">
                             <tr>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Land Type</th>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area</th>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Key Developments</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s3-th-type">Land Type</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s3-th-area">Area</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s3-th-dev">Key Developments</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-t">
-                                <td class="p-3 editable" contenteditable="false">Leased Land</td>
-                                <td class="p-3 editable" contenteditable="false">1.42 ha / 1,52,848 sqft</td>
-                                <td class="p-3 editable" contenteditable="false">Landscaping, restaurant, furniture, plantation</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td1-1">Leased Land</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td1-2">1.42 ha / 1,52,848 sqft</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td1-3">Landscaping, restaurant, furniture, plantation</td>
                             </tr>
                             <tr class="border-t bg-gray-50">
-                                <td class="p-3 editable" contenteditable="false">Govt. Land</td>
-                                <td class="p-3 editable" contenteditable="false">0.52 ha / 55,970 sqft</td>
-                                <td class="p-3 editable" contenteditable="false">Employee building, landscaping, bore, agriculture equipment</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td2-1">Govt. Land</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td2-2">0.52 ha / 55,970 sqft</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td2-3">Employee building, landscaping, bore, agriculture equipment</td>
                             </tr>
                             <tr class="border-t">
-                                <td class="p-3 editable" contenteditable="false">Cottage Land</td>
-                                <td class="p-3 editable" contenteditable="false">0.36 ha / 38,750 sqft</td>
-                                <td class="p-3 editable" contenteditable="false">Cottage construction, landscaping, water tank, plantation</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td3-1">Cottage Land</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td3-2">0.36 ha / 38,750 sqft</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s3-td3-3">Cottage construction, landscaping, water tank, plantation</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                     <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                     <div class="image-editor h-40 rounded-lg overflow-hidden shadow" data-id="s3-img-cottages">
                          <img src="https://placehold.co/400x300/a7f3d0/1e40af?text=Cottages" alt="Cottages Concept" class="w-full h-full object-cover">
                          <div class="edit-overlay"><p>Edit Link</p></div>
                          <input type="text" class="url-input p-1 rounded" value="https://placehold.co/400x300/a7f3d0/1e40af?text=Cottages" placeholder="Paste URL & Enter">
                      </div>
-                     <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                     <div class="image-editor h-40 rounded-lg overflow-hidden shadow" data-id="s3-img-restaurant">
                          <img src="https://placehold.co/400x300/fecaca/991b1b?text=Restaurant" alt="Restaurant Concept" class="w-full h-full object-cover">
                          <div class="edit-overlay"><p>Edit Link</p></div>
                          <input type="text" class="url-input p-1 rounded" value="https://placehold.co/400x300/fecaca/991b1b?text=Restaurant" placeholder="Paste URL & Enter">
                      </div>
                      <div class="p-4 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <p class="text-blue-800 font-semibold editable" contenteditable="false">Unique Feature: Fully operational farm-stay, luxury cottages, restaurant, water & adventure sports facilities.</p>
+                        <p class="text-blue-800 font-semibold editable" contenteditable="false" data-id="s3-feature">Unique Feature: Fully operational farm-stay, luxury cottages, restaurant, water & adventure sports facilities.</p>
                      </div>
                 </div>
             </div>
             
             <!-- Slide 4: Investment Breakdown – Leased Land -->
             <div id="slide-4" class="slide w-full">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Investment Breakdown – Leased Land</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s4-title">Investment Breakdown – Leased Land</h2>
                  <div class="overflow-x-auto">
                     <table class="min-w-full bg-white border border-gray-200 rounded-lg">
                         <thead class="bg-gray-100">
                             <tr>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Component</th>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area / Units</th>
-                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false">Cost (₹ Cr)</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s4-th-comp">Component</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s4-th-area">Area / Units</th>
+                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s4-th-cost">Cost (₹ Cr)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-t">
-                                <td class="p-3 editable" contenteditable="false">Landscaping & Development</td>
-                                <td class="p-3 editable" contenteditable="false">52,000 sqft</td>
-                                <td class="p-3 text-right editable" contenteditable="false">0.6</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td1-1">Landscaping & Development</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td1-2">52,000 sqft</td>
+                                <td class="p-3 text-right editable" contenteditable="false" data-id="s4-td1-3">0.6</td>
                             </tr>
                             <tr class="border-t bg-gray-50">
-                                <td class="p-3 editable" contenteditable="false">Restaurant Construction</td>
-                                <td class="p-3 editable" contenteditable="false">5,500 sqft</td>
-                                <td class="p-3 text-right editable" contenteditable="false">1.1</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td2-1">Restaurant Construction</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td2-2">5,500 sqft</td>
+                                <td class="p-3 text-right editable" contenteditable="false" data-id="s4-td2-3">1.1</td>
                             </tr>
                             <tr class="border-t">
-                                <td class="p-3 editable" contenteditable="false">Restaurant Furniture</td>
-                                <td class="p-3 editable" contenteditable="false">-</td>
-                                <td class="p-3 text-right editable" contenteditable="false">0.7</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td3-1">Restaurant Furniture</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td3-2">-</td>
+                                <td class="p-3 text-right editable" contenteditable="false" data-id="s4-td3-3">0.7</td>
                             </tr>
                             <tr class="border-t font-bold bg-blue-50">
-                                <td class="p-3 editable" contenteditable="false">Subtotal</td>
-                                <td class="p-3 editable" contenteditable="false">-</td>
-                                <td class="p-3 text-right editable" contenteditable="false">2.4</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td4-1">Subtotal</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td4-2">-</td>
+                                <td class="p-3 text-right editable" contenteditable="false" data-id="s4-td4-3">2.4</td>
                             </tr>
                             <tr class="border-t">
-                                <td class="p-3 editable" contenteditable="false">Lease Cost</td>
-                                <td class="p-3 editable" contenteditable="false">-</td>
-                                <td class="p-3 text-right editable" contenteditable="false">0</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td5-1">Lease Cost</td>
+                                <td class="p-3 editable" contenteditable="false" data-id="s4-td5-2">-</td>
+                                <td class="p-3 text-right editable" contenteditable="false" data-id="s4-td5-3">0</td>
                             </tr>
                              <tr class="border-t font-bold text-xl bg-blue-100 text-blue-800">
-                                <td class="p-4 editable" contenteditable="false">Total</td>
-                                <td class="p-4 editable" contenteditable="false">-</td>
-                                <td class="p-4 text-right editable" contenteditable="false">2.4</td>
+                                <td class="p-4 editable" contenteditable="false" data-id="s4-td6-1">Total</td>
+                                <td class="p-4 editable" contenteditable="false" data-id="s4-td6-2">-</td>
+                                <td class="p-4 text-right editable" contenteditable="false" data-id="s4-td6-3">2.4</td>
                             </tr>
                         </tbody>
                     </table>
@@ -233,26 +233,26 @@
 
             <!-- Slide 5: Investment Breakdown – Govt. Land & Farm Operations -->
             <div id="slide-5" class="slide w-full">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Investment Breakdown – Govt. Land & Farm</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s5-title">Investment Breakdown – Govt. Land & Farm</h2>
                  <div class="overflow-x-auto">
                     <table class="min-w-full bg-white border border-gray-200 rounded-lg">
                          <thead class="bg-gray-100">
                             <tr>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Component</th>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area / Units</th>
-                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false">Cost (₹ Cr)</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s5-th-comp">Component</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s5-th-area">Area / Units</th>
+                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s5-th-cost">Cost (₹ Cr)</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Employee Building</td><td class="p-3 editable" contenteditable="false">5,500 sqft</td><td class="p-3 text-right editable" contenteditable="false">0.55</td></tr>
-                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Landscaping & Plantation</td><td class="p-3 editable" contenteditable="false">56,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">1.1</td></tr>
-                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Govt. Land Development</td><td class="p-3 editable" contenteditable="false">60,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">0.9</td></tr>
-                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Bore, Servant Rooms, Pumps, Tractor, Irrigation</td><td class="p-3 editable" contenteditable="false">-</td><td class="p-3 text-right editable" contenteditable="false">0.15</td></tr>
-                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Land Cost</td><td class="p-3 editable" contenteditable="false">56,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">2.8</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false" data-id="s5-td1-1">Employee Building</td><td class="p-3 editable" contenteditable="false" data-id="s5-td1-2">5,500 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s5-td1-3">0.55</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false" data-id="s5-td2-1">Landscaping & Plantation</td><td class="p-3 editable" contenteditable="false" data-id="s5-td2-2">56,000 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s5-td2-3">1.1</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false" data-id="s5-td3-1">Govt. Land Development</td><td class="p-3 editable" contenteditable="false" data-id="s5-td3-2">60,000 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s5-td3-3">0.9</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false" data-id="s5-td4-1">Bore, Servant Rooms, Pumps, Tractor, Irrigation</td><td class="p-3 editable" contenteditable="false" data-id="s5-td4-2">-</td><td class="p-3 text-right editable" contenteditable="false" data-id="s5-td4-3">0.15</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false" data-id="s5-td5-1">Land Cost</td><td class="p-3 editable" contenteditable="false" data-id="s5-td5-2">56,000 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s5-td5-3">2.8</td></tr>
                             <tr class="border-t font-bold text-xl bg-green-100 text-green-800">
-                                <td class="p-4 editable" contenteditable="false">Total</td>
-                                <td class="p-4 editable" contenteditable="false">-</td>
-                                <td class="p-4 text-right editable" contenteditable="false">5.5</td>
+                                <td class="p-4 editable" contenteditable="false" data-id="s5-td6-1">Total</td>
+                                <td class="p-4 editable" contenteditable="false" data-id="s5-td6-2">-</td>
+                                <td class="p-4 text-right editable" contenteditable="false" data-id="s5-td6-3">5.5</td>
                             </tr>
                         </tbody>
                     </table>
@@ -261,27 +261,27 @@
 
             <!-- Slide 6: Investment Breakdown – Cottage Area -->
             <div id="slide-6" class="slide w-full">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Investment Breakdown – Cottage Area</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s6-title">Investment Breakdown – Cottage Area</h2>
                  <div class="overflow-x-auto">
                     <table class="min-w-full bg-white border border-gray-200 rounded-lg">
                         <thead class="bg-gray-100">
                             <tr>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Component</th>
-                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false">Area / Units</th>
-                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false">Cost (₹ Cr)</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s6-th-comp">Component</th>
+                                <th class="text-left font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s6-th-area">Area / Units</th>
+                                <th class="text-right font-semibold text-gray-700 p-3 editable" contenteditable="false" data-id="s6-th-cost">Cost (₹ Cr)</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Landscaping & Development</td><td class="p-3 editable" contenteditable="false">38,750 sqft</td><td class="p-3 text-right editable" contenteditable="false">1.2</td></tr>
-                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Cottage Construction</td><td class="p-3 editable" contenteditable="false">3,100 sqft</td><td class="p-3 text-right editable" contenteditable="false">1.0</td></tr>
-                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Cottage Furniture</td><td class="p-3 editable" contenteditable="false">-</td><td class="p-3 text-right editable" contenteditable="false">0.1</td></tr>
-                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Govt. Land Development</td><td class="p-3 editable" contenteditable="false">35,000 sqft</td><td class="p-3 text-right editable" contenteditable="false">0.5</td></tr>
-                            <tr class="border-t"><td class="p-3 editable" contenteditable="false">Water Tank</td><td class="p-3 editable" contenteditable="false">30,000 Ltr</td><td class="p-3 text-right editable" contenteditable="false">0.1</td></tr>
-                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false">Land Cost</td><td class="p-3 editable" contenteditable="false">38,750 sqft</td><td class="p-3 text-right editable" contenteditable="false">2.5</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false" data-id="s6-td1-1">Landscaping & Development</td><td class="p-3 editable" contenteditable="false" data-id="s6-td1-2">38,750 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s6-td1-3">1.2</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false" data-id="s6-td2-1">Cottage Construction</td><td class="p-3 editable" contenteditable="false" data-id="s6-td2-2">3,100 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s6-td2-3">1.0</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false" data-id="s6-td3-1">Cottage Furniture</td><td class="p-3 editable" contenteditable="false" data-id="s6-td3-2">-</td><td class="p-3 text-right editable" contenteditable="false" data-id="s6-td3-3">0.1</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false" data-id="s6-td4-1">Govt. Land Development</td><td class="p-3 editable" contenteditable="false" data-id="s6-td4-2">35,000 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s6-td4-3">0.5</td></tr>
+                            <tr class="border-t"><td class="p-3 editable" contenteditable="false" data-id="s6-td5-1">Water Tank</td><td class="p-3 editable" contenteditable="false" data-id="s6-td5-2">30,000 Ltr</td><td class="p-3 text-right editable" contenteditable="false" data-id="s6-td5-3">0.1</td></tr>
+                            <tr class="border-t bg-gray-50"><td class="p-3 editable" contenteditable="false" data-id="s6-td6-1">Land Cost</td><td class="p-3 editable" contenteditable="false" data-id="s6-td6-2">38,750 sqft</td><td class="p-3 text-right editable" contenteditable="false" data-id="s6-td6-3">2.5</td></tr>
                             <tr class="border-t font-bold text-xl bg-yellow-100 text-yellow-800">
-                                <td class="p-4 editable" contenteditable="false">Total</td>
-                                <td class="p-4 editable" contenteditable="false">-</td>
-                                <td class="p-4 text-right editable" contenteditable="false">5.4</td>
+                                <td class="p-4 editable" contenteditable="false" data-id="s6-td7-1">Total</td>
+                                <td class="p-4 editable" contenteditable="false" data-id="s6-td7-2">-</td>
+                                <td class="p-4 text-right editable" contenteditable="false" data-id="s6-td7-3">5.4</td>
                             </tr>
                         </tbody>
                     </table>
@@ -290,28 +290,28 @@
 
             <!-- Slide 7: Project Highlights -->
             <div id="slide-7" class="slide w-full">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Project Highlights</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s7-title">Project Highlights</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <ul class="space-y-3 text-gray-700">
-                        <li class="editable" contenteditable="false">✓ Luxury farm-stay along Narmada River</li>
-                        <li class="editable" contenteditable="false">✓ Fully furnished cottages & restaurant with modern amenities</li>
-                        <li class="editable" contenteditable="false">✓ Landscaped gardens, plantation of mango, guava, citrus, chiku, rudraksh, mahogany, and neem trees</li>
-                        <li class="editable" contenteditable="false">✓ Employee accommodation with fully furnished buildings</li>
-                        <li class="editable" contenteditable="false">✓ Integrated irrigation & bore systems for sustainability</li>
-                        <li class="editable" contenteditable="false">✓ Opportunity for water tourism tie-ups (boating, adventure activities)</li>
+                        <li class="editable" contenteditable="false" data-id="s7-hl-1">✓ Luxury farm-stay along Narmada River</li>
+                        <li class="editable" contenteditable="false" data-id="s7-hl-2">✓ Fully furnished cottages & restaurant with modern amenities</li>
+                        <li class="editable" contenteditable="false" data-id="s7-hl-3">✓ Landscaped gardens, plantation of mango, guava, citrus, chiku, rudraksh, mahogany, and neem trees</li>
+                        <li class="editable" contenteditable="false" data-id="s7-hl-4">✓ Employee accommodation with fully furnished buildings</li>
+                        <li class="editable" contenteditable="false" data-id="s7-hl-5">✓ Integrated irrigation & bore systems for sustainability</li>
+                        <li class="editable" contenteditable="false" data-id="s7-hl-6">✓ Opportunity for water tourism tie-ups (boating, adventure activities)</li>
                     </ul>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow" data-id="s7-img-gardens">
                             <img src="https://placehold.co/300x300/c7d2fe/312e81?text=Gardens" alt="Landscaped Gardens" class="w-full h-full object-cover">
                             <div class="edit-overlay"><p>Edit Link</p></div>
                             <input type="text" class="url-input p-1 rounded" value="https://placehold.co/300x300/c7d2fe/312e81?text=Gardens" placeholder="Paste URL & Enter">
                         </div>
-                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow">
+                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow" data-id="s7-img-amenities">
                             <img src="https://placehold.co/300x300/ddd6fe/4c1d95?text=Amenities" alt="Modern Amenities" class="w-full h-full object-cover">
                             <div class="edit-overlay"><p>Edit Link</p></div>
                             <input type="text" class="url-input p-1 rounded" value="https://placehold.co/300x300/ddd6fe/4c1d95?text=Amenities" placeholder="Paste URL & Enter">
                         </div>
-                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow col-span-2">
+                        <div class="image-editor h-40 rounded-lg overflow-hidden shadow col-span-2" data-id="s7-img-sports">
                             <img src="https://placehold.co/600x300/e0f2fe/075985?text=Water+Sports" alt="Adventure Area" class="w-full h-full object-cover">
                             <div class="edit-overlay"><p>Edit Link</p></div>
                             <input type="text" class="url-input p-1 rounded" value="https://placehold.co/600x300/e0f2fe/075985?text=Water+Sports" placeholder="Paste URL & Enter">
@@ -322,34 +322,34 @@
 
             <!-- Slide 8: Investment Request -->
             <div id="slide-8" class="slide w-full text-center">
-                 <h2 class="text-3xl font-bold text-gray-800 mb-6 editable" contenteditable="false">Investment Request</h2>
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 editable" contenteditable="false" data-id="s8-title">Investment Request</h2>
                  <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-8 rounded-lg max-w-3xl mx-auto shadow-md">
-                     <p class="text-lg mb-2 editable" contenteditable="false">Total Investment Requested:</p>
-                     <p class="text-5xl font-extrabold mb-6 editable" contenteditable="false">₹5 Crore (approx.)</p>
-                     <p class="text-lg mb-4 font-medium editable" contenteditable="false">Purpose: Construction, development, landscaping, plantation, and operational readiness.</p>
-                     <p class="text-md mb-6 editable" contenteditable="false">Return Potential: Highlighted through profit-sharing and phased project operations.</p>
+                     <p class="text-lg mb-2 editable" contenteditable="false" data-id="s8-req-title">Total Investment Requested:</p>
+                     <p class="text-5xl font-extrabold mb-6 editable" contenteditable="false" data-id="s8-req-amount">₹5 Crore (approx.)</p>
+                     <p class="text-lg mb-4 font-medium editable" contenteditable="false" data-id="s8-req-purpose">Purpose: Construction, development, landscaping, plantation, and operational readiness.</p>
+                     <p class="text-md mb-6 editable" contenteditable="false" data-id="s8-req-return">Return Potential: Highlighted through profit-sharing and phased project operations.</p>
                      <div class="mt-8">
-                        <h3 class="text-xl font-semibold mb-3 editable" contenteditable="false">Next Steps</h3>
-                        <p class="text-lg editable" contenteditable="false">Approval & fund allocation for development in the upcoming year.</p>
+                        <h3 class="text-xl font-semibold mb-3 editable" contenteditable="false" data-id="s8-req-next-title">Next Steps</h3>
+                        <p class="text-lg editable" contenteditable="false" data-id="s8-req-next-steps">Approval & fund allocation for development in the upcoming year.</p>
                      </div>
                  </div>
             </div>
 
             <!-- Slide 9: Profit & ROI Projection -->
             <div id="slide-9" class="slide w-full">
-                 <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false">Profit & ROI Projection</h2>
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s9-title">Profit & ROI Projection</h2>
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h3 class="text-2xl font-semibold text-gray-700 mb-4 editable" contenteditable="false">Profit Potential</h3>
-                        <p class="bg-gray-100 p-4 rounded-lg text-center text-lg font-mono editable" contenteditable="false">Net Profit = Revenue – Expenses</p>
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-4 editable" contenteditable="false" data-id="s9-profit-title">Profit Potential</h3>
+                        <p class="bg-gray-100 p-4 rounded-lg text-center text-lg font-mono editable" contenteditable="false" data-id="s9-profit-formula">Net Profit = Revenue – Expenses</p>
                         
-                        <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4 editable" contenteditable="false">Manager’s Profit Share</h3>
+                        <h3 class="text-2xl font-semibold text-gray-700 mt-8 mb-4 editable" contenteditable="false" data-id="s9-share-title">Manager’s Profit Share</h3>
                         <ul class="list-disc list-inside space-y-2 text-lg text-gray-600">
-                            <li class="editable" contenteditable="false">10% initially</li>
-                            <li class="editable" contenteditable="false">Increasing to 15% post-completion</li>
+                            <li class="editable" contenteditable="false" data-id="s9-share-1">10% initially</li>
+                            <li class="editable" contenteditable="false" data-id="s9-share-2">Increasing to 15% post-completion</li>
                         </ul>
                     </div>
-                     <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg">
+                     <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg" data-id="s9-roi-chart">
                          <img src="https://placehold.co/600x400/dcfce7/14532d?text=ROI+Chart" alt="ROI Chart" class="w-full h-full object-cover">
                          <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
                          <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/600x400/dcfce7/14532d?text=ROI+Chart" placeholder="Paste new image URL and press Enter">
@@ -359,32 +359,32 @@
             
             <!-- Slide 10: Timeline -->
             <div id="slide-10" class="slide w-full">
-                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center editable" contenteditable="false">Project Timeline</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center editable" contenteditable="false" data-id="s10-title">Project Timeline</h2>
                 <div class="relative pl-8">
                     <!-- Vertical line -->
                     <div class="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-300"></div>
             
                     <div class="relative mb-8">
                         <div class="absolute left-[-8px] top-1.5 w-4 h-4 bg-blue-500 rounded-full border-2 border-white"></div>
-                        <h3 class="text-xl font-semibold text-blue-600 editable" contenteditable="false">Project Start: Upcoming year</h3>
+                        <h3 class="text-xl font-semibold text-blue-600 editable" contenteditable="false" data-id="s10-tl-start">Project Start: Upcoming year</h3>
                     </div>
             
                     <div class="relative mb-8">
                         <div class="absolute left-[-8px] top-1.5 w-4 h-4 bg-gray-400 rounded-full border-2 border-white"></div>
-                        <h3 class="text-xl font-semibold text-gray-700 mb-2 editable" contenteditable="false">Phased Development:</h3>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2 editable" contenteditable="false" data-id="s10-tl-phased-title">Phased Development:</h3>
                         <div class="pl-6 border-l-2 border-gray-200 ml-1 py-2">
-                            <p class="mb-2 editable" contenteditable="false"><strong>Phase 1:</strong> Leased Land & Restaurant Development</p>
-                            <p class="mb-2 editable" contenteditable="false"><strong>Phase 2:</strong> Govt. Land & Employee Accommodation</p>
-                            <p class="editable" contenteditable="false"><strong>Phase 3:</strong> Cottage Construction & Landscaping</p>
+                            <p class="mb-2 editable" contenteditable="false" data-id="s10-tl-phase1"><strong>Phase 1:</strong> Leased Land & Restaurant Development</p>
+                            <p class="mb-2 editable" contenteditable="false" data-id="s10-tl-phase2"><strong>Phase 2:</strong> Govt. Land & Employee Accommodation</p>
+                            <p class="editable" contenteditable="false" data-id="s10-tl-phase3"><strong>Phase 3:</strong> Cottage Construction & Landscaping</p>
                         </div>
                     </div>
             
                     <div class="relative">
                         <div class="absolute left-[-8px] top-1.5 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
-                        <h3 class="text-xl font-semibold text-green-600 editable" contenteditable="false">Expected Completion: Q4 2026</h3>
+                        <h3 class="text-xl font-semibold text-green-600 editable" contenteditable="false" data-id="s10-tl-complete">Expected Completion: Q4 2026</h3>
                     </div>
                 </div>
-                 <div class="mt-8 image-editor w-full h-40 rounded-lg overflow-hidden shadow-lg">
+                 <div class="mt-8 image-editor w-full h-40 rounded-lg overflow-hidden shadow-lg" data-id="s10-timeline-graphic">
                      <img src="https://placehold.co/800x200/fafafa/555?text=Timeline+Graphic" alt="Timeline Graphic" class="w-full h-full object-cover">
                      <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
                      <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/800x200/fafafa/555?text=Timeline+Graphic" placeholder="Paste new image URL and press Enter">
@@ -451,6 +451,56 @@
 
             let currentSlide = 0;
             let isEditMode = false;
+            const STORAGE_KEY = 'narmadaFarmsData';
+
+            // --- Persistence Logic ---
+            function saveData() {
+                if (!isEditMode) return; // Only save when in edit mode
+                const dataToSave = {
+                    text: {},
+                    images: {}
+                };
+
+                document.querySelectorAll('.editable[data-id]').forEach(el => {
+                    dataToSave.text[el.dataset.id] = el.innerHTML;
+                });
+
+                document.querySelectorAll('.image-editor[data-id]').forEach(editor => {
+                    const img = editor.querySelector('img');
+                    if (img) {
+                        dataToSave.images[editor.dataset.id] = img.src;
+                    }
+                });
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave));
+            }
+
+            function loadData() {
+                const savedData = localStorage.getItem(STORAGE_KEY);
+                if (!savedData) return;
+                
+                const data = JSON.parse(savedData);
+
+                if (data.text) {
+                    Object.keys(data.text).forEach(id => {
+                        const el = document.querySelector(`.editable[data-id="${id}"]`);
+                        if (el) el.innerHTML = data.text[id];
+                    });
+                }
+
+                if (data.images) {
+                    Object.keys(data.images).forEach(id => {
+                        const editor = document.querySelector(`.image-editor[data-id="${id}"]`);
+                        if (editor) {
+                            const img = editor.querySelector('img');
+                            const input = editor.querySelector('.url-input');
+                            if (img) img.src = data.images[id];
+                            if (input) input.value = data.images[id];
+                        }
+                    });
+                }
+            }
+
 
             // --- Slider Logic ---
             function showSlide(index) {
@@ -504,10 +554,14 @@
                 toggleEditBtn.classList.replace('hover:bg-blue-700', 'hover:bg-red-700');
                 editModeLabel.textContent = 'Edit Mode Active';
                 
-                editableElements.forEach(el => el.setAttribute('contenteditable', true));
+                editableElements.forEach(el => {
+                    el.setAttribute('contenteditable', true);
+                    el.addEventListener('blur', saveData); // Save on blur
+                });
             }
 
             function disableEditMode() {
+                saveData(); // Final save before logging out
                 isEditMode = false;
                 presentationWrapper.classList.remove('edit-mode');
                 
@@ -516,7 +570,10 @@
                 toggleEditBtn.classList.replace('hover:bg-red-700', 'hover:bg-blue-700');
                 editModeLabel.textContent = 'View Mode';
                 
-                editableElements.forEach(el => el.setAttribute('contenteditable', false));
+                editableElements.forEach(el => {
+                    el.setAttribute('contenteditable', false);
+                    el.removeEventListener('blur', saveData);
+                });
             }
 
             toggleEditBtn.addEventListener('click', () => {
@@ -558,22 +615,27 @@
                 const img = editor.querySelector('img');
                 const input = editor.querySelector('.url-input');
                 
+                const updateImage = () => {
+                    const newUrl = input.value.trim();
+                    if (newUrl && img.src !== newUrl) {
+                        img.src = newUrl;
+                        saveData();
+                    }
+                };
+                
                 input.addEventListener('keypress', (e) => {
                     if (e.key === 'Enter') {
                         e.preventDefault();
-                        const newUrl = input.value.trim();
-                        if (newUrl) img.src = newUrl;
+                        updateImage();
                         input.blur();
                     }
                 });
                 
-                 input.addEventListener('blur', () => {
-                    const newUrl = input.value.trim();
-                    if (newUrl && img.src !== newUrl) img.src = newUrl;
-                });
+                 input.addEventListener('blur', updateImage);
             });
 
             // --- Initialization ---
+            loadData();
             createIndicators();
             showSlide(currentSlide);
         });
