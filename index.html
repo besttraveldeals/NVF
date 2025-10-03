@@ -88,9 +88,6 @@
                 <button id="toggle-edit-mode" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
                     Enable Edit Mode
                 </button>
-                <button id="reset-btn" class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-lg text-sm font-medium text-white transition-colors" style="display: none;">
-                    Reset to Default
-                </button>
             </div>
         </header>
 
@@ -120,9 +117,9 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center editable" contenteditable="false" data-id="s2-title">Project Location</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg" data-id="s2-map">
-                         <img src="https://placehold.co/600x400/e0e0e0/333333?text=Project+Map+Placeholder" alt="Map of Project Location" class="w-full h-full object-cover">
+                         <img src="https://i.ibb.co/vCMm0r88/image.png" alt="Map of Project Location" class="w-full h-full object-cover">
                          <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
-                         <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/600x400/e0e0e0/333333?text=Project+Map+Placeholder" placeholder="Paste new image URL and press Enter">
+                         <input type="text" class="url-input p-2 rounded border" value="https://i.ibb.co/vCMm0r88/image.png" placeholder="Paste new image URL and press Enter">
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold mb-4 editable" contenteditable="false" data-id="s2-loc-details-title">Location Details</h3>
@@ -171,9 +168,9 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                      <div class="image-editor h-40 rounded-lg overflow-hidden shadow" data-id="s3-img-cottages">
-                         <img src="https://i.ibb.co/Mz6c6Mx/image.png" alt="Cottages Concept" class="w-full h-full object-cover">
+                         <img src="https://i.ibb.co/4nGMf7k/image.png" alt="Cottages Concept" class="w-full h-full object-cover">
                          <div class="edit-overlay"><p>Edit Link</p></div>
-                         <input type="text" class="url-input p-1 rounded" value="https://i.ibb.co/Mz6c6Mx/image.png" placeholder="Paste URL & Enter">
+                         <input type="text" class="url-input p-1 rounded" value="https://i.ibb.co/4nGMf7k/image.png" placeholder="Paste URL & Enter">
                      </div>
                      <div class="image-editor h-40 rounded-lg overflow-hidden shadow" data-id="s3-img-restaurant">
                          <img src="https://i.ibb.co/Mz6c6Mx/image.png" alt="Restaurant Concept" class="w-full h-full object-cover">
@@ -353,9 +350,9 @@
                         </ul>
                     </div>
                      <div class="image-editor w-full h-80 rounded-lg overflow-hidden shadow-lg" data-id="s9-roi-chart">
-                         <img src="https://placehold.co/600x400/dcfce7/14532d?text=ROI+Chart" alt="ROI Chart" class="w-full h-full object-cover">
+                         <img src="https://placehold.co/600x400/dcfce7/14532d?text=%20" alt="ROI Chart" class="w-full h-full object-cover">
                          <div class="edit-overlay"><p>Click to Edit Image Link</p></div>
-                         <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/600x400/dcfce7/14532d?text=ROI+Chart" placeholder="Paste new image URL and press Enter">
+                         <input type="text" class="url-input p-2 rounded border" value="https://placehold.co/600x400/dcfce7/14532d?text=%20" placeholder="Paste new image URL and press Enter">
                     </div>
                  </div>
             </div>
@@ -428,19 +425,6 @@
         </div>
     </div>
 
-    <!-- Confirmation Modal -->
-    <div id="confirm-modal" class="modal fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-sm text-center">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Confirm Reset</h2>
-            <p class="text-gray-600 mb-6">Are you sure you want to reset all content to its original state? This action cannot be undone.</p>
-            <div class="flex justify-center space-x-4">
-                <button id="confirm-cancel-btn" class="px-6 py-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded-lg">Cancel</button>
-                <button id="confirm-reset-btn" class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg">Reset</button>
-            </div>
-        </div>
-    </div>
-
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Slider elements
@@ -455,7 +439,6 @@
             const presentationWrapper = document.getElementById('presentation-wrapper');
             const editableElements = document.querySelectorAll('.editable');
             const imageEditors = document.querySelectorAll('.image-editor');
-            const resetBtn = document.getElementById('reset-btn');
 
             // Modal elements
             const loginModal = document.getElementById('login-modal');
@@ -464,9 +447,6 @@
             const loginIdInput = document.getElementById('login-id');
             const loginPassInput = document.getElementById('login-pass');
             const loginError = document.getElementById('login-error');
-            const confirmModal = document.getElementById('confirm-modal');
-            const confirmCancelBtn = document.getElementById('confirm-cancel-btn');
-            const confirmResetBtn = document.getElementById('confirm-reset-btn');
 
             let currentSlide = 0;
             let isEditMode = false;
@@ -567,7 +547,6 @@
             function enableEditMode() {
                 isEditMode = true;
                 presentationWrapper.classList.add('edit-mode');
-                resetBtn.style.display = 'inline-block';
                 
                 toggleEditBtn.textContent = 'Logout';
                 toggleEditBtn.classList.replace('bg-blue-600', 'bg-red-600');
@@ -584,7 +563,6 @@
                 saveData(); // Final save before logging out
                 isEditMode = false;
                 presentationWrapper.classList.remove('edit-mode');
-                resetBtn.style.display = 'none';
                 
                 toggleEditBtn.textContent = 'Enable Edit Mode';
                 toggleEditBtn.classList.replace('bg-red-600', 'bg-blue-600');
@@ -655,27 +633,6 @@
                  input.addEventListener('blur', updateImage);
             });
 
-            // Reset logic
-            resetBtn.addEventListener('click', () => {
-                confirmModal.style.display = 'flex';
-            });
-
-            confirmCancelBtn.addEventListener('click', () => {
-                confirmModal.style.display = 'none';
-            });
-            
-            confirmResetBtn.addEventListener('click', () => {
-                localStorage.removeItem(STORAGE_KEY);
-                window.location.reload();
-            });
-
-            confirmModal.addEventListener('click', (e) => {
-                if (e.target === confirmModal) {
-                    confirmModal.style.display = 'none';
-                }
-            });
-
-
             // --- Save data automatically before the page is closed or refreshed ---
             window.addEventListener('beforeunload', () => {
                 if (isEditMode) {
@@ -691,5 +648,4 @@
     </script>
 </body>
 </html>
-
 
